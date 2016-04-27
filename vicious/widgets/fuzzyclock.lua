@@ -65,7 +65,7 @@ local function worker(format, warg)
 	 end
 	 if 1 < minute % 5 and minute % 5 < 2.5 then
 		fuzzy = "Just after " .. fuzzy
-	 elseif 2.5 <= minute and minute % 5 < 4 then
+  elseif 2.5 <= minute and minute % 5 <= 4 then
 		fuzzy = "Nearly " .. fuzzy
 	 else
 		fuzzy = "Exactly " .. fuzzy

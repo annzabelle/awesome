@@ -11,7 +11,7 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 
-vicious = require("vicious")
+local vicious = require("vicious")
 -- Load Debian menu entries
 require("debian.menu")
 
