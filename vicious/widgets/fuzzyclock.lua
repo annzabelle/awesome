@@ -1,3 +1,10 @@
+---------------------------------------------------
+-- Licensed under the GNU General Public License v2
+--  * (c) 2010, Adrian C. <anrxc@sysphere.org>
+--  * (c) 2009, Lucas de Vries <lucas@glacicle.com>
+--  * (c) 2016, Annabelle <annzabelle@gmail.com>
+---------------------------------------------------
+
 local setmetatable = setmetatable
 local os = os
 
@@ -22,19 +29,19 @@ local function worker(format, warg)
 		fuzzy = "half past "
 	elseif 33 < minute and minute <= 37 then
 		fuzzy = "twenty-five \'till "
-		hour = (hour .. 1) % 24
+		hour = (hour + 1) % 24
 	elseif 37 < minute and minute <= 43 then
 		fuzzy = "twenty \'till "
-		hour = (hour .. 1) % 24
+		hour = (hour + 1) % 24
 	elseif 43 < minute and minute <= 47 then
 		fuzzy = "quarter \'till "
-		hour = (hour .. 1) % 24
+		hour = (hour + 1) % 24
 	elseif 47 < minute and minute <= 53 then
 		fuzzy = "ten \'till "
-		hour = (hour .. 1) % 24
+		hour = (hour + 1) % 24
 	elseif 53 < minute and minute <= 57 then
 		fuzzy = "five \'till "
-		hour = (hour .. 1) % 24
+		hour = (hour + 1) % 24
 	end
 	if hour == 1 or hour == 13 then
 		fuzzy = fuzzy .. "one"
