@@ -14,7 +14,7 @@ local fuzzyclock = {}
 local function worker(format, warg)
 	minute = tonumber(os.date("%M"))
 	hour = tonumber(os.date("%H"))
-	fuzzy = "nope"
+	fuzzy = " "
 	if 3 < minute and minute <= 7 then
 		fuzzy = "five past "
 	elseif 7 < minute and minute<= 13 then
